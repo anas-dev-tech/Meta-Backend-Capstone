@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding to UTF-8 -->
+    <meta charset="UTF-8">
+    
+    <!-- Set viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Set title of the page -->
+    <title>Little Lemon</title>
+    
+    <!-- Set description of the page for search engines -->
+    <meta name="description" content="Little lemon restaurant">
+    
+    <!-- Set author of the page -->
+    <meta name="author" content="Based in Chicago, Illinois, Little Lemon is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+    
+    <!-- Load favicon -->
+    <link rel="shortcut icon" type="image/png", href="{% static 'img/favicon.ico' %}">
+    
+    <!-- Load CSS file -->
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    
+    <!-- Connect to Google Fonts API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Load Google Fonts -->
+    <link href= "https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap"
+          rel="stylesheet"
+          async>
+</head>
+<body>
+    <!-- Load header content -->
+    {% include 'partials/_header.html' %}
+
+    <!-- Load main content -->
+    <main> {% block content %} {% endblock %} </main>
+
+    <!-- Load footer content -->
+    {% include 'partials/_footer.html' %}
+</body>
+</html>

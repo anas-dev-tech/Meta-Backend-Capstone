@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Start of hero section -->
+<section>
+    <article id="hero">
+        <!-- Heading for special offer -->
+        <h1 class="heading">SPECIAL OFFER</h1>
+        <!-- Text for special offer -->
+        <p class="offer">30% off this weekend</p>
+        <!-- Call to action button -->
+        <a href="{% url 'book' %}" class="cta">Book Now</a>
+    </article>
+</section>
+<!-- End of hero section -->
+
+<!-- Start of information section -->
+<section class="information-section">
+    <!-- Start of menu article -->
+    <article class="menu">
+        <!-- Title for menu section -->
+        <h2 class="menu-title">Our New Menu</h2>
+        <!-- Image for menu section -->
+        <img src="{% static 'img/grill.jpg' %}" alt="Grilled Food">
+        <!-- Description for menu section -->
+        <p class="menu-description">Our menu consists of 12-15 seasonal items based on Italian, Greek, and Turkish culture.</p>
+        <!-- Link to menu page -->
+        <p>
+            <a href="{% url 'menu' %}" class="see-menu-link">See our new menu</a>
+        </p>
+    </article>
+    <!-- End of menu article -->
+
+    <!-- Start of booking article -->
+    <article class="booking">
+        <!-- Title for booking section -->
+        <h2 class="booking-title">Book a table</h2>
+        <!-- Image for booking section -->
+        <img src="{% static 'img/salad.jpg' %}" alt="Salad">
+        <!-- Description for booking section -->
+        <p class="booking-description">Reserve your table for an Italian, Greek, and Turkish dining experience.</p>
+        <!-- Link to booking page -->
+        <p>
+            <a href="{% url 'book' %}" class="book-table-link">Book your table now</a>
+        </p>
+    </article>
+    <!-- End of booking article -->
+
+    <!-- Start of hours article -->
+    <article class="hours">
+        <!-- Title for hours section -->
+        <h2 class="hours-title">Opening Hours</h2>
+        <!-- Image for hours section -->
+        <img src="{% static 'img/head_chef.jpg' %}" alt="Head chef">
+        <!-- Description for hours section -->
+        <p class="hours-description">The Litle Lemon Restaurant is open 7 days a week, except for public holidays.</p>
+        <!-- List of hours -->
+        <ul class="hours-list">
+            <li>Mon - Fri: 2pm - 10pm</li>
+            <li>Sat: 2pm - 11pm</li>
+            <li>Sun: 2pm - 9pm</li>
+        </ul>
+    </article>
+    <!-- End of hours article -->
+</section>
+<!-- End of information section -->
+{% endblock %}
